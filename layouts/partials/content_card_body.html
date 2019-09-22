@@ -8,7 +8,7 @@
         <i class="tiny material-icons">person</i>&nbsp;{{ range .Site.Author }}{{ . }}{{ end }}
         {{ if ne .Site.Params.hideReadingTime true }}
             {{ if and (not (.Scratch.Get "showPostSummary")) (.Scratch.Get "fullsize") }}
-                - <i class="material-icons">timer</i>&nbsp;~{{ if le .ReadingTime 1 }}1 Minute{{ else }}{{ .ReadingTime }} Minutes{{ end }}
+                - <i class="tiny material-icons">timer</i>&nbsp;~{{ if le .ReadingTime 1 }}1 Minute{{ else }}{{ .ReadingTime }} Minutes{{ end }}
             {{ end }}
         {{ end }}
     </h6>

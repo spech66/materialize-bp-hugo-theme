@@ -9,7 +9,7 @@ figure > img {
     display: inline-block;
 }
 
-h1.card-title {
+h1.card-title, h2.card-title {
     margin-top: 0px;
 }
 

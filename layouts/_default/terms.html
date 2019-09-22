@@ -1,27 +1,31 @@
 {{ define "main" }}
 
 <div class="container">
-    <div class="mb-3">
-        <div class="card">
-            <div class="card-body">
-                <h1>{{ .Title }}</h1>
-                {{ range $key, $value := .Data.Terms }}
-                    <a href="#{{ $key | urlize }}" class="badge badge-primary"><span>{{ $key }}</span> <span class="badge badge-light">{{ $value.Count }}</span></a>
-                {{ end}}
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-content">
+                        <h1 class="card-title">{{ .Title }}</h1>
+                        {{ range $key, $value := .Data.Terms }}
+                            <a href="#{{ $key | urlize }}"><span>{{ $key }}</span> <span class="grey-text">({{ $value.Count }})</span></a>&nbsp;&nbsp;
+                        {{ end}}
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
     {{ range $key, $value := .Data.Terms }}
-        <div class="mb-3">
-            <div class="card">
-                        <div class="card-body">
-                    <h2 id="{{ $key | urlize }}">{{ $key }}</h2>
-                    <ul>
-                        {{ range $value.Pages.ByDate.Reverse }}
-                            <li><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></li>
-                        {{ end}}
-                    </ul>
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-content">
+                        <h2 class="card-title" id="{{ $key | urlize }}">{{ $key }}</h2>
+                        <ul>
+                            {{ range $value.Pages.ByDate.Reverse }}
+                                <li><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></li>
+                            {{ end}}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

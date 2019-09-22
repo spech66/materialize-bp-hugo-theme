@@ -6,40 +6,46 @@
 
 <div class="container">
     {{ if .Site.Params.showListsGrouped }}
-        <div class="mb-3">       
-            <div class="card">
-                <div class="card-body">
-                    <h1>{{ $sitetitle }}</h1>
-                    {{ range $key, $value := .Pages.GroupByDate "2006" }}
-                        <a href="#{{ .Key | urlize }}" class="badge badge-primary"><span>{{ .Key }}</span> <span class="badge badge-light">{{ len .Pages }}</span></a>
-                    {{ end}}
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-content">
+                        <h1 class="card-title">{{ $sitetitle }}</h1>
+                        {{ range $key, $value := .Pages.GroupByDate "2006" }}
+                            <a href="#{{ $key | urlize }}"><span>{{ .Key }}</span> <span class="grey-text">({{ len .Pages }})</span></a>&nbsp;&nbsp;
+                        {{ end}}
+                    </div>
                 </div>
             </div>
         </div>
-        {{ range .Pages.GroupByDate "2006" }} 
-            <div class="mb-3">    
-                <div class="card">
-                    <div class="card-body">  
-                        <h2 id="{{ .Key | urlize }}">{{ .Key }}</h2>
-                        <ul>
-                            {{ range .Pages }}
-                                <li>{{ .PublishDate.Format $customDateFormat }} - <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></li>
-                            {{ end}}
-                        </ul>
+        {{ range .Pages.GroupByDate "2006" }}
+            <div class="row">
+                <div class="col s12 m12">
+                    <div class="card">
+                        <div class="card-content">  
+                            <h2 class="card-title" id="{{ .Key | urlize }}">{{ .Key }}</h2>
+                            <ul>
+                                {{ range .Pages }}
+                                    <li>{{ .PublishDate.Format $customDateFormat }} - <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></li>
+                                {{ end}}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         {{ end }}
     {{ else }}
-        <div class="mb-3">    
-            <div class="card">
-                <div class="card-body">  
-                    <h1>{{ .Title }}</h1>
-                    <ul>
-                        {{ range .Pages.ByPublishDate.Reverse }}
-                            <li>{{ .PublishDate.Format $customDateFormat }} - <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></li>
-                        {{ end}}
-                    </ul>
+        <div class="row">
+            <div class="col s12 m12">  
+                <div class="card">
+                    <div class="card-content">  
+                        <h1 class="card-title">{{ .Title }}</h1>
+                        <ul>
+                            {{ range .Pages.ByPublishDate.Reverse }}
+                                <li>{{ .PublishDate.Format $customDateFormat }} - <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></li>
+                            {{ end}}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

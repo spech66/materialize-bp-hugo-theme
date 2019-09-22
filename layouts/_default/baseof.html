@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    {{- partial "seo_schema" . -}}
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        {{- block "main" . }}{{- end }}
+        {{- partial "footer.html" . -}}
+        {{- partial "js.html" . -}}
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<footer class="page-footer orange">
+    <div class="container">
+        <div class="row">
+            <div class="col l4 s12">
+                <h5 class="white-text">{{ .Site.Title }}</h5>
+                <p class="grey-text text-lighten-4">{{ .Site.Params.description }}</p>
+            </div>
+            <div class="col l4 s12">
+            <h5 class="white-text">Social</h5>
+                <ul>
+                    {{- partial "social.html" . -}}
+                </ul>
+            </div>
+            <div class="col l4 s12">
+                <h5 class="white-text">Connect</h5>
+                <ul>
+                    {{ range $index, $element := .Site.Menus.footer }}
+                        {{ if .HasChildren }}
+                            <li><a class="white-text" href="{{ .URL }}">{{ .Pre }} {{ .Name }}</a></li>
+                            {{ range .Children }}
+                                <li><a class="white-text" href="{{ .URL }}">{{ .Pre }} {{ .Name }}</a></li>
+                            {{ end }}
+                        {{ else }}
+                            <li><a class="white-text" href="{{ .URL }}">{{ .Pre }} {{ .Name }}</a></li>
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            &copy; {{ now.Format "2006" }} {{ range .Site.Author }}{{ . }}{{ end }}.
+            Theme by <a class="orange-text text-lighten-3" href="https://www.spech.de">Sebastian Pech</a>.
+            Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>.
+        </div>
+    </div>
+</footer>

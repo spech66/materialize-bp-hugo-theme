@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<div class="container">
+    {{ $paginator := .Paginate ( where .Site.RegularPages.ByPublishDate.Reverse "Type" "!=" "page") }}
+    {{ if .Site.Params.startPageColumns }}
+        <div class="row">
+            {{ range $paginator.Pages }}
+                <div class="col s4 m4">
+                    {{- partial "content_index.html" . -}}
+                </div>
+            {{ end }}
+        </div>
+    {{ else }}
+        {{ range $paginator.Pages }}
+            <div class="row">
+                <div class="col s12 m12">
+                    {{- partial "content_index.html" . -}}
+                </div>
+            </div>
+        {{ end }}
+    {{ end }}
+
+    {{ template "_internal/pagination.html" . }}
+</div>
+
+{{ end }}

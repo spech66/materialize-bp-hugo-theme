@@ -1,0 +1,16 @@
+<div class="card-action">
+    <small>
+        {{ if ne .Type "page" }}
+            {{ if gt .Params.categories 0 }}
+                {{ range .Params.categories }}
+                    <a href="{{ "/categories/" | relURL }}#{{ . | urlize }}">+{{ . }}</a>
+                {{ end }}
+            {{ end }}
+            {{ if gt .Params.tags 0 }}
+                {{ range .Params.tags }}
+                    <a href="{{ "/tags/" | relURL }}#{{ . | urlize }}">#{{ . }}</a>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </small>
+</div>

@@ -35,13 +35,13 @@ theme="materialize-bp-hugo-theme"
 [params]
   description = "Text about the site"
   #images = ["logo.jpg"]
-  # showPostSummary = true
+   showPostSummary = true
   # startPageColumns = true
   # showListsGrouped = true
   # alwaysExpandMenu = true
   customDateFormat = "02.01.2006"
   # hideReadingTime = true
-  # themeColor="dark" # dark, light, blue, do not set for bootstrap default
+  # themeColor="dark" # dark, light, blue, do not set for default
   # js=["/js/test_site.js"]
   # css=["/css/test_site.css"]
   # csscdn=["https://fonts.googleapis.com/css?family=Concert+One|Roboto&display=swap"]
@@ -96,10 +96,11 @@ theme="materialize-bp-hugo-theme"
 
   [[menu.main]]
     identifier = "about"
-    name = "About"
+    # name = "About"  # Material Icons are displayed as block so use the icon only
     url = "/about/"
     weight = 10
-    pre = "<i class='fas fa-heart'></i>"
+    pre = "<i class='material-icons'>speaker_notes</i>" # Material Icons
+    # pre = "<i class='fas fa-heart'></i>" # FontAwesone has more love ;-)
 
   [[menu.footer]]
     identifier = "xxx"

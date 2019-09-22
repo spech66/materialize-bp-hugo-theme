@@ -1,0 +1,18 @@
+figure > img {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.list-inline-item {
+    display: inline-block;
+}
+
+h1.card-title {
+    margin-top: 0px;
+}
+
+h1.card-title > a {
+    font-size: 2.3rem;
+}

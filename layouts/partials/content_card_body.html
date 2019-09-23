@@ -4,11 +4,11 @@
 <div class="card-content">
     <h1 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h1>
     <h6 class="grey-text">
-        <i class="tiny material-icons">calendar_today</i>&nbsp;{{ .PublishDate.Format $customDateFormat }}{{ if gt .Lastmod .PublishDate }}, last updated {{ .Lastmod.Format $customDateFormat }}{{ end }} -
+        <i class="tiny material-icons">calendar_today</i>&nbsp;{{ .PublishDate.Format $customDateFormat }}{{ if gt .Lastmod .PublishDate }}, {{ i18n "lastupdated" }} {{ .Lastmod.Format $customDateFormat }}{{ end }} -
         <i class="tiny material-icons">person</i>&nbsp;{{ range .Site.Author }}{{ . }}{{ end }}
         {{ if ne .Site.Params.hideReadingTime true }}
             {{ if and (not (.Scratch.Get "showPostSummary")) (.Scratch.Get "fullsize") }}
-                - <i class="tiny material-icons">timer</i>&nbsp;~{{ if le .ReadingTime 1 }}1 Minute{{ else }}{{ .ReadingTime }} Minutes{{ end }}
+                - <i class="tiny material-icons">timer</i>&nbsp;~{{ i18n "readingTime" .ReadingTime }}
             {{ end }}
         {{ end }}
     </h6>
@@ -28,7 +28,7 @@
         <p>{{ .Summary }}</p>
 
         <p><br />
-            <a href="{{ .RelPermalink }}" class="blue waves-effect waves-light btn"><i class="material-icons right">navigate_next</i>Read more</a>
+            <a href="{{ .RelPermalink }}" class="blue waves-effect waves-light btn"><i class="material-icons right">navigate_next</i>{{ i18n "readmore" }}</a>
             {{ if ne .Site.Params.hideReadingTime true }}
                 (<i class="tiny material-icons">timer</i>&nbsp;~{{ .ReadingTime }} Min.)
             {{end}}

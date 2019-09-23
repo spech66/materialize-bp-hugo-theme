@@ -6,13 +6,14 @@
                 <p class="grey-text text-lighten-4">{{ .Site.Params.description }}</p>
             </div>
             <div class="col l4 s12">
-            <h5 class="white-text">Social</h5>
+            <h5 class="white-text">{{ i18n "social" }}</h5>
                 <ul>
                     {{- partial "social.html" . -}}
                 </ul>
             </div>
             <div class="col l4 s12">
-                <h5 class="white-text">Site</h5>
+                {{ partial "i18nlist.html" . }}
+                <h5 class="white-text">{{ i18n "site" }}</h5>
                 <ul>
                     {{ range $index, $element := .Site.Menus.footer }}
                         {{ if .HasChildren }}
@@ -31,8 +32,8 @@
     <div class="footer-copyright">
         <div class="container">
             &copy; {{ now.Format "2006" }} {{ range .Site.Author }}{{ . }}{{ end }}.
-            Theme by <a class="orange-text text-lighten-3" href="https://www.spech.de">Sebastian Pech</a>.
-            Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>.
+            {{ i18n "themeby" }} <a class="orange-text text-lighten-3" href="https://www.spech.de">Sebastian Pech</a>.
+            {{ i18n "madeby" }} <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>.
         </div>
     </div>
 </footer>

@@ -2,16 +2,16 @@
 {{ $bootstrap := resources.Get "/js/materialize.min.js" }}
 {{ $mainjs := resources.Get "/js/main.js" }}
 {{ $customjs := resources.Get "/js/custom.js" }}
-{{ $allscript := slice $jquery $bootstrap $mainjs $customjs | resources.Concat "/js/vendor.js" | minify | fingerprint }}
+{{ $allscript := slice $jquery $bootstrap $mainjs $customjs | resources.Concat "/js/vendor.js" | minify | fingerprint "sha512" }}
 <script src="{{ $allscript.RelPermalink }}" integrity="{{ $allscript.Data.Integrity }}"></script>
 
 {{- range .Site.Params.js }}
-    {{ $pagescript := resources.Get . | minify | fingerprint }}
+    {{ $pagescript := resources.Get . | minify | fingerprint "sha512" }}
     <script src="{{ $pagescript.RelPermalink }}" integrity="{{ $pagescript.Data.Integrity }}"></script>
 {{- end }}
 
 {{- range .Params.js }}
-    {{ $pagescript := resources.Get . | minify | fingerprint }}
+    {{ $pagescript := resources.Get . | minify | fingerprint "sha512" }}
     <script src="{{ $pagescript.RelPermalink }}" integrity="{{ $pagescript.Data.Integrity }}"></script>
 {{- end }}
 

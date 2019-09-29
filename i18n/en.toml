@@ -22,3 +22,13 @@ other = "Theme by"
 
 [madeby]
 other = "Made by"
+
+# Taxonomoy title hack
+[Categories]
+other = "Categories"
+[Categorie]
+other = "Categorie"
+[Tags]
+other = "Tags"
+[Tag]
+other = "Tag"

@@ -5,7 +5,7 @@
             <div class="col s12 m12">
                 <div class="card">
                     <div class="card-content">
-                        <h1 class="card-title">{{ .Title }}</h1>
+                        <h1 class="card-title">{{ i18n .Title }}</h1>
                         {{ range $key, $value := .Data.Terms }}
                             <a href="#{{ $key | urlize }}"><span>{{ $key }}</span> <span class="grey-text">({{ $value.Count }})</span></a>&nbsp;&nbsp;
                         {{ end}}

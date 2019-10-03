@@ -82,8 +82,18 @@ Use the `config.toml` from the `exampleSite` subdirectory as base.
 - `showListsGrouped = true` to add headers for every year.
 - `showPostSummary = true` to only show a summary on index and lists.
 - `alwaysExpandMenu = true` to expand the menu on non-mobile devices otherwise the mobile button is shown on all devices. (***WiP - Only in bootstrap at the moment***)
-- `themeColor` set to dark, light, blue (do not set for default). (***WiP - Only in bootstrap at the moment - DO NOT SET YET!***)
 - `hideReadingTime` to hide reading time.
+
+Theme colors might be changed using the main colors from [Materialize color palette](https://materializecss.com/color.html).
+Might be like one of this: red, pink, indigo lighten-2, cyan, blue, light-green, amber, ...
+
+- `themeColor1` used by main buttons and navbar. (default=light-blue)
+- `themeColor1text` used by headlines. (default=light-blue-text)
+- `themeColor2` used by footer. (default=orange)
+- `themeColor2text` used by footer and card actions. (default=orange-text text-lighten-3)
+
+Currently the link color, pagination and blockquote color needs to be adjusted according to `main.css` too.
+Overwrite in your `/assets/css/custom.css` file.
 
 ## Screenshots of cofigurations
 

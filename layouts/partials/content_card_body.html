@@ -2,7 +2,7 @@
 {{ with .Site.Params.customDateFormat }}{{ $customDateFormat = . }}{{ end }}
 
 <div class="card-content">
-    <h1 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h1>
+    <h1 class="card-title"><a href="{{ .RelPermalink }}" class="{{ default "light-blue-text" (.Site.Params.themeColor1text) }}">{{ .Title | markdownify }}</a></h1>
     <h6 class="grey-text">
         <i class="tiny material-icons">calendar_today</i>&nbsp;{{ .PublishDate.Format $customDateFormat }}{{ if gt .Lastmod .PublishDate }}, {{ i18n "lastupdated" }} {{ .Lastmod.Format $customDateFormat }}{{ end }} -
         <i class="tiny material-icons">person</i>&nbsp;{{ range .Site.Author }}{{ . }}{{ end }}
@@ -28,7 +28,7 @@
         <p>{{ .Summary }}</p>
 
         <p><br />
-            <a href="{{ .RelPermalink }}" class="blue waves-effect waves-light btn"><i class="material-icons right">navigate_next</i>{{ i18n "readmore" }}</a>
+            <a href="{{ .RelPermalink }}" class="{{ default "light-blue" (.Site.Params.themeColor1) }} waves-effect waves-light btn"><i class="material-icons right">navigate_next</i>{{ i18n "readmore" }}</a>
             {{ if ne .Site.Params.hideReadingTime true }}
                 (<i class="tiny material-icons">timer</i>&nbsp;~{{ .ReadingTime }} Min.)
             {{end}}

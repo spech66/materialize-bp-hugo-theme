@@ -14,7 +14,7 @@
                             <h1 class="card-title"><a href="{{ "/" | relLangURL }}">{{ .Title | markdownify }}</a></h1>                                                
                             <p class="card-text">{{ i18n "error404" }}</p>
                             <p><br />
-                                <a href="{{ "/" | relLangURL }}" class="blue waves-effect waves-light btn"><i class="material-icons right">navigate_next</i>{{ i18n "gotohome" }}</a>
+                                <a href="{{ "/" | relLangURL }}" class="{{ default "light-blue" (.Site.Params.themeColor1) }} waves-effect waves-light btn"><i class="material-icons right">navigate_next</i>{{ i18n "gotohome" }}</a>
                             </p>
                         </div>
                     </div>

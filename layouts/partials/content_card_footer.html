@@ -3,12 +3,12 @@
         {{ if ne .Type "page" }}
             {{ if gt .Params.categories 0 }}
                 {{ range .Params.categories }}
-                    <a href="{{ "/categories/" | relLangURL }}#{{ . | urlize }}">+{{ . }}</a>
+                    <a href="{{ "/categories/" | relLangURL }}#{{ . | urlize }}" class="{{ default "orange-text text-lighten-3" ($.Site.Params.themeColor2text) }}">+{{ . }}</a>
                 {{ end }}
             {{ end }}
             {{ if gt .Params.tags 0 }}
                 {{ range .Params.tags }}
-                    <a href="{{ "/tags/" | relLangURL }}#{{ . | urlize }}">#{{ . }}</a>
+                    <a href="{{ "/tags/" | relLangURL }}#{{ . | urlize }}" class="{{ default "orange-text text-lighten-3" ($.Site.Params.themeColor2text) }}">#{{ . }}</a>
                 {{ end }}
             {{ end }}
         {{ end }}

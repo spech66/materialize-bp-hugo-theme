@@ -41,7 +41,11 @@ theme="materialize-bp-hugo-theme"
   # alwaysExpandMenu = true
   customDateFormat = "02.01.2006"
   # hideReadingTime = true
-  # themeColor="dark" # dark, light, blue, do not set for default
+  #themeColor1 = "light-green" # main buttons and navbar
+  #themeColor1text = "light-green-text"
+  #themeColor2 = "red" # footer
+  #themeColor2text = "red-text text-lighten-3"
+  # Please adjust colors in /assets/css/custom.css file according to main.css from theme.
   # js=["/js/test_site.js"]
   # css=["/css/test_site.css"]
   # csscdn=["https://fonts.googleapis.com/css?family=Concert+One|Roboto&display=swap"]

@@ -245,6 +245,7 @@ Icons for Social Media. Add the block to the config.
   snapchat         = ""
   pinterest        = ""
   telegram         = ""
+  discord          = "" # invite link
   # Email
   email            = ""
 ```

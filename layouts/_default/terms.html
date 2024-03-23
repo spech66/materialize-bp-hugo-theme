@@ -7,7 +7,7 @@
                     <div class="card-content">
                         <h1 class="card-title">{{ i18n .Title }}</h1>
                         {{ range $key, $value := .Data.Terms }}
-                            <a href="#{{ $key | urlize }}"><span>{{ $key }}</span> <span class="grey-text">({{ $value.Count }})</span></a>&nbsp;&nbsp;
+                            <a href="#{{ $key | urlize }}"><span>{{ $value.Page.Title }}</span> <span class="grey-text">({{ $value.Count }})</span></a>&nbsp;&nbsp;
                         {{ end}}
                     </div>
                 </div>
@@ -19,7 +19,7 @@
             <div class="col s12 m12">
                 <div class="card">
                     <div class="card-content">
-                        <h2 class="card-title" id="{{ $key | urlize }}">{{ $key }}</h2>
+                        <h2 class="card-title" id="{{ $key | urlize }}">{{ $value.Page.Title }}</h2>
                         <ul>
                             {{ range $value.Pages.ByDate.Reverse }}
                                 <li><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></li>

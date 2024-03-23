@@ -107,11 +107,7 @@ Overwrite in your `/assets/css/custom.css` file.
 
 ## Google Analytics
 
-This theme uses the internal asynchronous template for Google Analytics tracking. You only have to provide your tracking id in your configuration file.
-
-```yaml
-googleAnalytics = "UA-123-45"
-```
+The native Hugo Google Analytics template has been removed!
 
 ## Page templates / archetypes
 

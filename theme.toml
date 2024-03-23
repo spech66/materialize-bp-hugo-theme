@@ -6,8 +6,8 @@ license = "MIT"
 licenselink = "https://github.com/spech66/materialize-bp-hugo-theme/blob/master/LICENSE"
 description = "MaterializeCSS based Hugo theme which supports out of the box best practices."
 homepage = "https://github.com/spech66/materialize-bp-hugo-theme/"
-tags = ["minimalist", "minimal", "blog", "clean", "simple", "material design", "responsive", "google analytics", "syntax sighlighting", "light", "fast", "dark", "pages", "font awesome", "fontawesome", "flexbox", "multilingual", "customizable", "mobile"]
-features = ["responsive", "google analytics", "material design", "open graph", "twitter cards"]
+tags = ["minimalist", "minimal", "blog", "clean", "simple", "material design", "responsive", "syntax sighlighting", "light", "fast", "dark", "pages", "font awesome", "fontawesome", "flexbox", "multilingual", "customizable", "mobile"]
+features = ["responsive", "material design", "open graph", "twitter cards"]
 min_version = "0.57.0"
 
 [author]

@@ -13,7 +13,6 @@ ignoreErrors = ["error-remote-getjson"]
 footnoteReturnLinkContents = "^"
 
 # Theme specific examples
-author = "Sebastian Pech"
 copyright = "Sebastian Pech"
 enableRobotsTXT = true
 pygmentsCodeFences = true
@@ -51,7 +50,8 @@ theme="materialize-bp-hugo-theme"
   # js=["/js/test_site.js"]
   # css=["/css/test_site.css"]
   # csscdn=["https://fonts.googleapis.com/css?family=Concert+One|Roboto&display=swap"]
-
+  [params.author]
+    name = "Sebastian Pech"
 
 #[languages]
 #  [languages.en]

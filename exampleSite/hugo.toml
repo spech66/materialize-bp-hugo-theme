@@ -2,7 +2,6 @@ baseURL = "https://gohugo.io/"
 title = "Hugo Themes"
 # author = "Steve Francia"
 # copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
-# paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
@@ -17,8 +16,11 @@ copyright = "Sebastian Pech"
 enableRobotsTXT = true
 pygmentsCodeFences = true
 canonifyurls = true
-paginate = 6
+
 theme="materialize-bp-hugo-theme"
+
+[pagination]
+  pagerSize = 6
 
 [sitemap]
     changefreq = "weekly"
@@ -29,9 +31,6 @@ theme="materialize-bp-hugo-theme"
     post = "/:year/:month/:slug/"
     pages = "/:slug/"
     page = "/:slug/"
-
-[Author]  
-  name = "Sebastian Pech"
 
 [params]
   description = "Text about the site"
@@ -53,6 +52,55 @@ theme="materialize-bp-hugo-theme"
   [params.author]
     name = "Sebastian Pech"
 
+  # Sets Social Media icons to appear and link to your account. Value should be your
+  # username unless otherwise noted.
+  # Code from https://themes.gohugo.io/future-imperfect/ theme
+  [params.social]
+    # Coding Communities
+    github           = "spech66"
+    gitlab           = ""
+    stackoverflow    = "" # User Number
+    bitbucket        = ""
+    jsfiddle         = ""
+    codepen          = ""
+    # Visual Art Communities
+    deviantart       = ""
+    flickr           = ""
+    behance          = ""
+    dribbble         = ""
+    # Publishing Communities
+    wordpress        = ""
+    medium           = ""
+    # Professional/Business Oriented Communities
+    linkedin         = "sebastian-pech"
+    linkedin_company = ""
+    foursquare       = ""
+    xing             = "Sebastian_Pech3"
+    slideshare       = ""
+    # Social Networks
+    facebook         = ""
+    googleplus       = ""
+    reddit           = ""
+    quora            = ""
+    youtube          = "" 
+    vimeo            = ""
+    whatsapp         = "" # WhatsApp Number
+    instagram        = ""
+    tumblr           = ""
+    twitter          = "spech84"
+    skype            = ""
+    snapchat         = ""
+    pinterest        = ""
+    telegram         = ""
+    discord          = "" # invite link
+    # Email
+    email            = ""
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 #[languages]
 #  [languages.en]
 #    languageName = "English"
@@ -64,52 +112,6 @@ theme="materialize-bp-hugo-theme"
 #    title = "Mein Blog"
 #    weight = 2
 #    [languages.de.params]
-
-
-# Sets Social Media icons to appear and link to your account. Value should be your
-# username unless otherwise noted.
-# Code from https://themes.gohugo.io/future-imperfect/ theme
-[social]
-  # Coding Communities
-  github           = "spech66"
-  gitlab           = ""
-  stackoverflow    = "" # User Number
-  bitbucket        = ""
-  jsfiddle         = ""
-  codepen          = ""
-  # Visual Art Communities
-  deviantart       = ""
-  flickr           = ""
-  behance          = ""
-  dribbble         = ""
-  # Publishing Communities
-  wordpress        = ""
-  medium           = ""
-  # Professional/Business Oriented Communities
-  linkedin         = "sebastian-pech"
-  linkedin_company = ""
-  foursquare       = ""
-  xing             = "Sebastian_Pech3"
-  slideshare       = ""
-  # Social Networks
-  facebook         = ""
-  googleplus       = ""
-  reddit           = ""
-  quora            = ""
-  youtube          = "" 
-  vimeo            = ""
-  whatsapp         = "" # WhatsApp Number
-  instagram        = ""
-  tumblr           = ""
-  twitter          = "spech84"
-  skype            = ""
-  snapchat         = ""
-  pinterest        = ""
-  telegram         = ""
-  discord          = "" # invite link
-  # Email
-  email            = ""
-
 
 [menu]
 

@@ -31,7 +31,7 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            &copy; {{ now.Format "2006" }} {{ range .Site.Author }}{{ . }}{{ end }}.
+            &copy; {{ now.Format "2006" }} {{ range .Site.Params.Author }}{{ . }}{{ end }}.
             {{ i18n "themeby" }} <a class="{{ default "orange-text text-lighten-3" (.Site.Params.themeColor2text) }}" href="https://www.spech.de" target="_blank" rel="noopener noreferrer">Sebastian Pech</a>.
             {{ i18n "madeby" }} <a class="{{ default "orange-text text-lighten-3" (.Site.Params.themeColor2text) }}" href="http://materializecss.com" target="_blank" rel="noopener noreferrer">Materialize</a>.
         </div>

@@ -86,6 +86,7 @@ theme="materialize-bp-hugo-theme"
     vimeo            = ""
     whatsapp         = "" # WhatsApp Number
     instagram        = ""
+    tiktok           = "" # @username
     tumblr           = ""
     twitter          = "spech84"
     skype            = ""

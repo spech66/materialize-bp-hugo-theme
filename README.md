@@ -235,6 +235,7 @@ Icons for Social Media. Add the block to the config.
   vimeo            = ""
   whatsapp         = "" # WhatsApp Number
   instagram        = ""
+  tiktok           = "" # @username
   tumblr           = ""
   twitter          = ""
   skype            = ""

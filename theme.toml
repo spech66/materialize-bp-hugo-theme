@@ -8,7 +8,7 @@ description = "MaterializeCSS based Hugo theme which supports out of the box bes
 homepage = "https://github.com/spech66/materialize-bp-hugo-theme/"
 tags = ["minimalist", "minimal", "blog", "clean", "simple", "material design", "responsive", "syntax sighlighting", "light", "fast", "dark", "pages", "font awesome", "fontawesome", "flexbox", "multilingual", "customizable", "mobile"]
 features = ["responsive", "material design", "open graph", "twitter cards"]
-min_version = "0.57.0"
+min_version = "0.158.0"
 
 [author]
   name = "Sebastian Pech"

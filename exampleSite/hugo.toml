@@ -1,8 +1,9 @@
+ignoreFiles = ["content/portfolio/\\.*","content/product/\\.*","content/sketch/\\.*","content/homepage/\\.*","content/post/\\.*","content/\\.*"] # disable example pages as this is a single page
 baseURL = "https://gohugo.io/"
 title = "Hugo Themes"
 # author = "Steve Francia"
 # copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
-languageCode = "en"
+locale = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 # prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
@@ -104,12 +105,12 @@ theme="materialize-bp-hugo-theme"
 
 #[languages]
 #  [languages.en]
-#    languageName = "English"
+#    label = "English"
 #    title = "My blog"
 #    weight = 1
 #    [languages.en.params]
 #  [languages.de]
-#    languageName = "Deutsch"
+#    label = "Deutsch"
 #    title = "Mein Blog"
 #    weight = 2
 #    [languages.de.params]
